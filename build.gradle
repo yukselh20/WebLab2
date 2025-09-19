@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+// Paket ismini kendi değiştirdiğinle güncelle
+group = 'com.hamza.weblab1'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // fastcgi-lib.jar dosyasının adının bu olduğundan emin ol
+    implementation files("libs/fastcgi-lib.jar")
+
+    // Google'ın GSON kütüphanesi
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    manifest {
+        attributes(
+                // Paket ismini kendi değiştirdiğinle güncelle
+                'Main-Class': 'com.hamza.weblab1.Main'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    archiveFileName = 'app.jar'
+    destinationDirectory = layout.buildDirectory.dir('libs')
+}

@@ -1,0 +1,29 @@
+services:
+  # 1. Servis: Bizim Java FastCGI uygulamamız
+  fcgi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      # Konteynerin işletim sistemine saat dilimini 'Türkiye Saati' olarak ayarla
+      - TZ=Europe/Istanbul
+    networks:
+      - backend
+
+  # 2. Servis: Apache Web Sunucusu
+  httpd:
+    image: "httpd:2.4"
+    # Bilgisayarımızın 8080 portunu, konteynerin 80 portuna yönlendir.
+    ports:
+      - "8080:80"
+    # Yerel dosyalarımızı konteynerin içine "yansıt" (mount et).
+    volumes:
+      - "./httpd.conf:/usr/local/apache2/conf/httpd.conf" # Ayar dosyası
+      - "./static:/usr/local/apache2/htdocs"              # Statik dosyalar (html, css, js)
+    # Bu servisi de "backend" ağına bağla
+    networks:
+      - backend
+
+# Konteynerlerin birbiriyle konuşabilmesi için sanal bir ağ oluştur
+networks:
+  backend:

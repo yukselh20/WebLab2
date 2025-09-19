@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Lab 1</title>
+    <!-- We will create style.css in the next step -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Main container table for layout -->
+<table class="main-table">
+
+    <!-- Row 1: Header -->
+    <tr id="header">
+        <td colspan="2">
+            <h1>Yuksel Hamza</h1>
+            <h2>Group P3232 | Variant 408078</h2>
+        </td>
+    </tr>
+
+    <!-- Row 2: Main Content (Graph and Form) -->
+    <tr>
+        <!-- Column 1: Coordinate Graph -->
+        <td id="graph-cell">
+            <img src="images/graph.png" alt="Coordinate Graph" width="600">
+            <!-- Note: I have re-uploaded your graph image to a public host (Imgur) -->
+            <!-- so it can be easily displayed. -->
+        </td>
+
+        <!-- Column 2: The Form -->
+        <td id="form-cell">
+            <form id="coordinates-form" method="POST">
+                <!-- Select for X -->
+                <div class="form-group">
+                    <label for="x-select">Select X:</label>
+                    <select id="x-select" name="x" required>
+                        <option value="-2">-2</option>
+                        <option value="-1.5">-1.5</option>
+                        <option value="-1">-1</option>
+                        <option value="-0.5">-0.5</option>
+                        <option value="0">0</option>
+                        <option value="0.5">0.5</option>
+                        <option value="1">1</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <!-- Text field for Y -->
+                <div class="form-group">
+                    <label for="y-text">Enter Y (-5 ... 5):</label>
+                    <input type="text" id="y-text" name="y" placeholder="e.g., 2.5" required>
+                </div>
+
+                <!-- Radio buttons for R -->
+                <div class="form-group">
+                    <label>Select R:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="r1" name="r" value="1" required> <label for="r1">1</label>
+                        <input type="radio" id="r2" name="r" value="1.5"> <label for="r2">1.5</label>
+                        <input type="radio" id="r3" name="r" value="2"> <label for="r3">2</label>
+                        <input type="radio" id="r4" name="r" value="2.5"> <label for="r4">2.5</label>
+                        <input type="radio" id="r5" name="r" value="3"> <label for="r5">3</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-buttons">
+                    <button type="submit">Check</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </td>
+    </tr>
+
+    <!-- Row 3: Results Table -->
+    <tr>
+        <td colspan="2">
+            <h2>Results</h2>
+            <table id="results-table">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Result</th>
+                    <th>Attempt Time</th>
+                    <th>Processing Time (µs)</th>
+                </tr>
+                </thead>
+                <tbody id="results-body">
+                <!-- Results will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+</table>
+
+<!-- We will create script.js in a later step -->
+<script src="script.js"></script>
+
+</body>
+</html>
