@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Forma "submit" (gönderme) olayı ekliyoruz.
     form.addEventListener('submit', (event) => {
-        // Formun varsayılan davranışını (sayfayı yeniden yükleme) engelliyoruz.
+        // sayfayı yeniden yükleme engelliyoruz.
         event.preventDefault();
 
         // 1. İSTEMCİ TARAFLI DOĞRULAMA
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const y = yInput.value.trim();
         const r = formData.get('r');
 
-        // 3. AJAX (FETCH) İLE SUNUCUYA GÖNDERME
-        // Lab guide'da belirtilen URL'yi kullanıyoruz. Yerel test için /calculate yeterli.
+        // 3. AJAX İLE SUNUCUYA GÖNDERME
+        // Yerel test için /calculate yeterli.
         const url = '/calculate';
 
         fetch(url, {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            // Veriyi "x=1&y=2.5&r=3" formatına çeviriyoruz.
+
             body: new URLSearchParams({ x, y, r })
         })
             .then(response => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <td>${result.attemptTime}</td>
                                     <td>${result.processingTime.toFixed(3)} µs</td>
                                 </tr>`;
-                    resultsBody.innerHTML += newRow; // Yeni satırı tabloya ekle
+                    resultsBody.innerHTML += newRow; // Yeni satır ekleme
                 });
             })
             .catch(error => {
