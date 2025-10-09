@@ -35,3 +35,4 @@ out/
 # If you were managing dependencies properly with Gradle, you wouldn't commit any JARs.
 # For this lab, we can decide whether to upload it or not. Let's ignore it.
 /libs/
+/sessions/
