@@ -1,9 +1,9 @@
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'war'
 }
 
-group = 'com.hamza.weblab1'
+group = 'com.hamza.weblab2'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -16,21 +16,21 @@ java {
 }
 
 dependencies {
-    implementation files('libs/fastcgi-lib.jar', 'libs/gson-2.10.1.jar')
+    // Jakarta Servlet API. 'compileOnly' means this is provided by the server (WildFly).
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
 
+    // JSTL libraries that must be bundled with our application.
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+
+    // ADD THIS LINE: Gson library for creating JSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Dependencies for running unit tests
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
     useJUnitPlatform()
-}
-
-shadowJar {
-    manifest {
-        attributes('Main-Class': 'com.hamza.weblab1.Main')
-    }
-    archiveBaseName.set('app')
-    archiveClassifier.set('')
-    archiveVersion.set('')
 }

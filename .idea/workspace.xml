@@ -4,24 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89cfd793-c572-42c5-a451-cbd1b19ffe88" name="Changes" comment="v1">
-      <change afterPath="$PROJECT_DIR$/httpd-helios.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seccions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/Params.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/ValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="89cfd793-c572-42c5-a451-cbd1b19ffe88" name="Changes" comment="session added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab2/model/HistoryEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab2/servlets/AreaCheckServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab2/servlets/ControllerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab2/utils/HitChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/result.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpd.conf" beforeDir="false" afterPath="$PROJECT_DIR$/httpd.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/graph.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/httpd-helios.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/httpd.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/Params.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamza/weblab1/ValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/graph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +37,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="web-lab2" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -72,9 +97,11 @@
     &quot;Gradle.web-lab1 [:com.hamza.weblab1.Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hamza/IdeaProjects/web-lab1/build.gradle&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hamza/IdeaProjects/web-lab2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -83,6 +110,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -94,6 +122,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hamza\IdeaProjects\web-lab2\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\hamza\IdeaProjects\web-lab2\src\main\webapp" />
       <recent name="C:\Users\hamza\IdeaProjects\web-lab1\libs" />
       <recent name="C:\Users\hamza\IdeaProjects\web-lab1\static\styles" />
     </key>
@@ -102,7 +132,6 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -120,6 +149,20 @@
       <workItem from="1759401200749" duration="84000" />
       <workItem from="1759401856206" duration="14831000" />
       <workItem from="1759608486370" duration="35000" />
+      <workItem from="1760018485763" duration="1086000" />
+      <workItem from="1760133042321" duration="1071000" />
+      <workItem from="1760134160695" duration="301000" />
+      <workItem from="1760558385708" duration="2622000" />
+      <workItem from="1760562993908" duration="33000" />
+      <workItem from="1760563047290" duration="21306000" />
+      <workItem from="1760786962703" duration="732000" />
+      <workItem from="1760793002854" duration="3078000" />
+      <workItem from="1760902996939" duration="7253000" />
+      <workItem from="1761230616105" duration="2978000" />
+      <workItem from="1761278939705" duration="11553000" />
+      <workItem from="1761917107975" duration="644000" />
+      <workItem from="1762033989257" duration="6000" />
+      <workItem from="1762463921909" duration="720000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -153,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758266250017</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="session added">
+      <option name="closed" value="true" />
+      <created>1760018521741</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760018521741</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +212,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+    <MESSAGE value="session added" />
+    <option name="LAST_COMMIT_MESSAGE" value="session added" />
   </component>
 </project>
